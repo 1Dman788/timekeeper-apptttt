@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard - TimeKeep</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Admin Dashboard</h1>
+        <button id="logoutBtn" class="btn secondary">Logout</button>
+      </header>
+
+      <section id="employee-management" class="card">
+        <h2>Employees</h2>
+        <!-- Employee list and creation form -->
+        <div id="employee-list-container"></div>
+        <form id="create-employee-form" class="inline-form">
+          <h3>Create New Employee</h3>
+          <div class="form-row">
+            <input type="text" id="newName" placeholder="Name" required />
+            <input type="email" id="newEmail" placeholder="Email" required />
+            <input type="number" id="newHourly" placeholder="Hourly Rate" step="0.01" min="0" required />
+            <input type="password" id="newPassword" placeholder="Temp Password" required />
+            <button type="submit" class="btn">Add</button>
+          </div>
+        </form>
+        <div id="create-employee-error" class="error"></div>
+      </section>
+
+      <section id="settings-section" class="card">
+        <h2>Settings</h2>
+        <div class="form-row">
+          <label for="payPeriodStartDate">Pay Period Start Date:</label>
+          <input type="date" id="payPeriodStartDate" />
+          <button id="savePayPeriod" class="btn">Save</button>
+        </div>
+        <div id="settings-msg" class="success"></div>
+      </section>
+
+      <section id="employee-detail" class="card">
+        <h2>Employee Detail</h2>
+        <div id="select-employee-row" class="form-row">
+          <label for="employeeSelect">Select Employee:</label>
+          <select id="employeeSelect">
+            <option value="">--Select an employee--</option>
+          </select>
+        </div>
+        <div id="employeeInfo"></div>
+        <div id="employeeTableContainer"></div>
+        <button id="exportCsvBtn" class="btn" style="display:none;">Export CSV</button>
+        <div id="admin-messages" class="success"></div>
+      </section>
+    </div>
+
+    <script type="module" src="js/admin.js"></script>
+  </body>
+</html>

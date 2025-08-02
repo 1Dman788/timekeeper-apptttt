@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TimeKeep - Login</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <!-- Firebase SDKs will be loaded via modules inside auth.js -->
+  </head>
+  <body>
+    <div class="container">
+      <h1>TimeKeep</h1>
+      <div id="login-container" class="card">
+        <h2>Login</h2>
+        <form id="loginForm">
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              required
+              placeholder="you@example.com"
+            />
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input
+              type="password"
+              id="password"
+              required
+              placeholder="Enter your password"
+            />
+          </div>
+          <div id="error-message" class="error"></div>
+          <button type="submit" class="btn">Login</button>
+        </form>
+      </div>
+    </div>
+
+    <script type="module" src="js/auth.js"></script>
+  </body>
+</html>

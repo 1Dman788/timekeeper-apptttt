@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Employee Portal - TimeKeep</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Employee Portal</h1>
+        <button id="logoutBtn" class="btn secondary">Logout</button>
+      </header>
+
+      <section id="punch-section" class="card">
+        <h2>Time Clock</h2>
+        <p id="punch-status">Checking current status...</p>
+        <button id="punchBtn" class="btn">Punch In</button>
+      </section>
+
+      <section id="history-section" class="card">
+        <h2>Shift History</h2>
+        <div id="history-container">
+          <!-- Table will be generated here -->
+        </div>
+      </section>
+    </div>
+
+    <script type="module" src="js/employee.js"></script>
+  </body>
+</html>
